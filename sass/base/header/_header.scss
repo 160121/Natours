@@ -1,0 +1,16 @@
+.header {
+  height: 90vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 128, 0, 0.8),
+      rgba(144, 238, 144, 0.9)
+    ),
+    url("https://www.expedia.com/stories/wp-content/uploads/2021/09/Yoga-Outdoors-in-Bora-Bora-overlooking-a-blue-lagoon.jpg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  &_icon {
+    font-size: 2rem;
+    color: $color-white;
+  }
+}

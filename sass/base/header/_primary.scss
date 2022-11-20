@@ -1,0 +1,21 @@
+.heading-primary-main {
+  text-transform: uppercase;
+  display: block;
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 35px;
+  animation-name: toleft;
+  animation-duration: 3s;
+  animation-delay: 1s;
+}
+.heading-primary-sub {
+  text-transform: uppercase;
+  display: block;
+  font-size: 35px;
+  font-weight: 300;
+  letter-spacing: 15px;
+  animation-name: toright;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  margin-bottom: 50px;
+}

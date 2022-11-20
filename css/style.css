@@ -1,0 +1,505 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "poppins", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.7;
+  padding: 30px; }
+
+@keyframes toleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); }
+  80% {
+    transform: translateX(20px); }
+  100% {
+    transform: translateX(0px); } }
+
+@keyframes toright {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); }
+  80% {
+    transform: translateX(-20px); }
+  100% {
+    transform: translateX(0px); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); }
+  80% {
+    transform: translateY(-20px); }
+  100% {
+    transform: translateY(0px); } }
+
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 10px;
+  top: 60%;
+  left: 40%;
+  position: relative;
+  border-radius: 100px;
+  transition: all 0.2s; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  transition: all 0.2s;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.2s; }
+
+.btn-white {
+  background-color: white;
+  color: gray; }
+  .btn-white::after {
+    background-color: white; }
+  .btn-white--1 {
+    top: 30%;
+    left: 30%; }
+
+.btn-animated {
+  animation: moveInBottom 0.5s ease-out;
+  animation-fill-mode: backwards; }
+
+.text-box {
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  left: 27%;
+  color: white;
+  text-shadow: none; }
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: green;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid green;
+  padding: 3px;
+  transition: all 0.2s; }
+
+.btn-text:hover {
+  background-color: green;
+  color: white;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.833);
+  transform: translateY(20rem); }
+
+.btn-sec {
+  color: green;
+  text-decoration: none;
+  padding: 0.5rem; }
+  .btn-sec:hover {
+    color: white;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.833);
+    background-color: green; }
+
+.btn-book {
+  color: gray;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.7rem 0.7rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.833);
+  background-color: white;
+  border-radius: 100px;
+  margin-left: 6rem; }
+  .btn-book:hover {
+    animation: moveInBottom 5s ease-out; }
+
+.btn-green {
+  text-transform: uppercase;
+  background-color: rgba(51, 244, 8, 0.916);
+  color: white;
+  max-width: fit-content;
+  font-size: 1rem;
+  font-weight: 200;
+  padding: 0.3rem 1rem;
+  border-radius: 1.5rem;
+  text-decoration: none; }
+
+.header {
+  height: 90vh;
+  background-image: linear-gradient(to right bottom, rgba(0, 128, 0, 0.8), rgba(144, 238, 144, 0.9)), url("https://www.expedia.com/stories/wp-content/uploads/2021/09/Yoga-Outdoors-in-Bora-Bora-overlooking-a-blue-lagoon.jpg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
+  .header_icon {
+    font-size: 2rem;
+    color: white; }
+
+.heading-primary-main {
+  text-transform: uppercase;
+  display: block;
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 35px;
+  animation-name: toleft;
+  animation-duration: 3s;
+  animation-delay: 1s; }
+
+.heading-primary-sub {
+  text-transform: uppercase;
+  display: block;
+  font-size: 35px;
+  font-weight: 300;
+  letter-spacing: 15px;
+  animation-name: toright;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  margin-bottom: 50px; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 0rem; }
+  .row .col-1-of-2 {
+    width: calc((100%-6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 *6rem) / 3); }
+    .row .col-1-of-3:first-child {
+      margin-left: 5rem; }
+  .row .col-1-of-4 {
+    width: 18rem; }
+    .row .col-1-of-4:not(:last-child) {
+      margin-right: 4rem; }
+    .row .col-1-of-4:first-child {
+      margin-left: 3rem; }
+  .row .col-2-of-3 {
+    width: calc( (2 * (100%-2 *6rem) / 3)+6rem); }
+  .row .col-2-of-4 {
+    width: calc( 2 * ((100%-3 *6rem) / 4)+6rem); }
+  .row .col-3-of-4 {
+    width: calc( 3 * (100%-3 *6rem) / 4 +2 *6rem); }
+
+.heading-secondary {
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  background-image: linear-gradient(to right, green, rgba(51, 244, 8, 0.916));
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.2s;
+  margin-bottom: 3rem; }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.4); }
+
+.heading-tertiary {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 1.2rem;
+  margin-bottom: 1.3rem;
+  width: 100%; }
+
+.img {
+  position: relative; }
+  .img_im {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.169);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.2s;
+    outline-offset: 1.5rem; }
+    .img_im--p1 {
+      left: 0;
+      top: 0rem; }
+    .img_im--p2 {
+      right: 0;
+      top: 4rem; }
+    .img_im--p3 {
+      left: 20%;
+      top: 12rem; }
+    .img_im:hover {
+      outline: 0.5rem solid rgba(51, 244, 8, 0.916);
+      transform: scale(1.05);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.169);
+      z-index: 20; }
+  .img:hover .img_im:not(:hover) {
+    transform: scale(0.9); }
+
+.card-image {
+  background-size: cover; }
+
+.u-center-text {
+  text-align: center; }
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  text-align: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  height: 30rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s; }
+  .feature-box_icon {
+    font-size: 5rem;
+    margin-top: -3rem;
+    color: transparent;
+    background-image: linear-gradient(to right, green, rgba(51, 244, 8, 0.916));
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: cover; }
+  .feature-box:hover {
+    transform: translateY(-1.6rem) scale(1.05); }
+
+.section-about {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding-top: 2rem;
+  margin-bottom: 18rem; }
+
+.section-features {
+  padding: 10rem 0;
+  margin-top: 5rem;
+  background-image: linear-gradient(to right, rgba(0, 128, 0, 0.8), rgba(144, 238, 144, 0.9)), url("https://www.expedia.com/stories/wp-content/uploads/2021/09/Yoga-Outdoors-in-Bora-Bora-overlooking-a-blue-lagoon.jpg");
+  background-size: cover;
+  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%); }
+
+.stories-section {
+  margin-top: 7rem;
+  position: relative; }
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  margin-bottom: 7rem;
+  outline: auto; }
+  .card_side {
+    color: white;
+    height: 30rem;
+    transition: all 0.2s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.96); }
+    .card_side--front {
+      background-color: white; }
+    .card_side--back {
+      transform: rotateY(180deg); }
+      .card_side--back-1 {
+        background-image: linear-gradient(to right bottom, orange, orangered); }
+      .card_side--back-2 {
+        background-image: linear-gradient(to right bottom, green, rgba(51, 244, 8, 0.916)); }
+      .card_side--back-3 {
+        background-image: linear-gradient(to right bottom, blue, skyblue); }
+  .card:hover .card_side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card_side--back {
+    transform: rotateY(0deg); }
+  .card_picture {
+    background-size: cover;
+    background-position: top;
+    height: 15rem;
+    background-blend-mode: screen; }
+    .card_picture--1 {
+      background-image: linear-gradient(to right bottom, orange, orangered), url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4Ax-AWw0yyjwayFpL4RqJVQ071VwHFXxhDw&usqp=CAU"); }
+    .card_picture--2 {
+      background-image: linear-gradient(to right bottom, green, rgba(51, 244, 8, 0.916)), url("https://loveincorporated.blob.core.windows.net/contentimages/gallery/a9fb36be-f130-4f84-ab3b-363116c9c5df-Zhangjiajie_China.jpg"); }
+    .card_picture--3 {
+      background-image: linear-gradient(to right bottom, blue, skyblue), url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXkBVDjOw4Q9QW1asrW7nQrVX4D8LqhtkIXg&usqp=CAU"); }
+  .card_heading {
+    text-transform: uppercase;
+    position: absolute;
+    color: white;
+    top: 40%;
+    left: 60%;
+    padding: 0;
+    text-align: center; }
+    .card_heading--1 {
+      background-image: linear-gradient(to right bottom, orange, orangered); }
+    .card_heading--2 {
+      background-image: linear-gradient(to right bottom, green, rgba(51, 244, 8, 0.916)); }
+    .card_heading--3 {
+      background-image: linear-gradient(to right bottom, blue, skyblue); }
+  .card_details {
+    padding: 1.5rem;
+    color: black; }
+    .card_details ul {
+      list-style-type: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card_details ul li {
+        text-align: center; }
+        .card_details ul li:not(:last-child) {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.8); }
+
+.price {
+  text-align: center;
+  padding-top: 9rem;
+  font-size: 7rem;
+  line-height: 8rem;
+  margin-bottom: 7rem;
+  color: rgba(255, 255, 255, 0.3); }
+
+.story {
+  width: 55%;
+  margin: 0 auto;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
+  transform: skewX(-12deg); }
+  .story_shape {
+    width: 10rem;
+    height: 10rem;
+    background-color: red;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    margin-left: 3rem;
+    margin-top: 0.5rem;
+    transform: skewX(12deg); }
+  .story_para {
+    padding-left: 15rem;
+    padding-right: 4rem;
+    transform: skewX(12deg); }
+  .story_pic {
+    height: 100%;
+    width: 100%; }
+  .story_caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    text-transform: uppercase; }
+
+.below {
+  margin-top: 3rem;
+  text-align: center; }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%; }
+
+.booking {
+  margin-top: 5rem;
+  padding: 5rem 0;
+  background-image: linear-gradient(to right bottom, green, rgba(51, 244, 8, 0.916));
+  position: relative; }
+  .booking_box {
+    width: 70%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+    height: 30rem;
+    margin: auto;
+    /*background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.5) 0%,
+      rgba($color-white, 0.5) 50%,
+      rgba($color-white, 0) 50%,
+      url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3JjHtYDvu7zMMFjU-p9SOHXO096diPt23XA&usqp=CAU")
+    );*/
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 50%), url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4Ax-AWw0yyjwayFpL4RqJVQ071VwHFXxhDw&usqp=CAU");
+    background-size: cover;
+    background-position: top; }
+  .booking_details {
+    margin-top: 1.5rem;
+    margin-right: 50%;
+    margin-left: 4rem; }
+
+.form {
+  margin-top: -1rem; }
+  .form_group label {
+    font-size: 1rem; }
+  .form_input {
+    height: 2.5rem;
+    width: 96%;
+    padding-top: 0.1rem;
+    font-family: inherit;
+    font-size: inherit;
+    border-bottom: 1px solid orangered;
+    margin-bottom: 2px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.56); }
+    .form_input:active {
+      border-color: rgba(51, 244, 8, 0.5); }
+    .form_input:focus {
+      outline: none;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+      border-bottom: 2px solid red; }
+    .form_input:valid {
+      border-bottom: 2px solid rgba(51, 244, 8, 0.916); }
+  .form_radio {
+    margin: 3rem 0; }
+
+.footer {
+  background-color: gray; }
+  .footer_icon {
+    font-size: 10rem;
+    text-align: center;
+    margin-left: 45%;
+    margin-bottom: 12rem;
+    color: transparent;
+    background-image: linear-gradient(to right, rgba(51, 244, 8, 0.916), green);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: cover; }
+  .footer_list {
+    width: 100%;
+    padding: 0.1rem; }
+    .footer_list:first-child {
+      margin-right: 4rem; }
+    .footer_list:last-child {
+      margin-left: 2rem; }
+  .footer_item {
+    list-style-type: none;
+    color: white;
+    padding: 0.5rem;
+    display: inline-block; }
+  .footer_link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6); }
+    .footer_link:link, .footer_link:visited {
+      transition: all 0.2s; }
+    .footer_link:hover {
+      transform: rotateY(50deg) scale(1.05);
+      color: rgba(51, 244, 8, 0.916); }
+  .footer_copyright {
+    display: inline-block; }
+
+.align-center {
+  margin-left: 47%;
+  margin-top: -3rem; }

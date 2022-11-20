@@ -1,0 +1,36 @@
+.img {
+  position: relative;
+  &_im {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.169);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.2s;
+    outline-offset: 1.5rem;
+    &--p1 {
+      left: 0;
+      top: 0rem;
+    }
+    &--p2 {
+      right: 0;
+      top: 4rem;
+    }
+    &--p3 {
+      left: 20%;
+      top: 12rem;
+    }
+    &:hover {
+      outline: 0.5rem solid $color-lightgreen;
+      transform: scale(1.05);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.169);
+      z-index: 20;
+    }
+  }
+  &:hover &_im:not(:hover) {
+    transform: scale(0.9);
+  }
+}
+.card-image {
+  background-size: cover;
+}

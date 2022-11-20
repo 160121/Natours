@@ -1,0 +1,129 @@
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  margin-bottom: 7rem;
+  outline: auto;
+  &_side {
+    color: $color-white;
+    height: 30rem;
+    transition: all 0.2s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.96);
+    &--front {
+      background-color: $color-white;
+    }
+    &--back {
+      transform: rotateY(180deg);
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-orange,
+          $color-orangered
+        );
+      }
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-green,
+          $color-lightgreen
+        );
+      }
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-blue,
+          $color-lightblue
+        );
+      }
+    }
+  }
+  &:hover &_side--front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &_side--back {
+    transform: rotateY(0deg);
+  }
+
+  //front styling
+  &_picture {
+    background-size: cover;
+    background-position: top;
+    height: 15rem;
+    background-blend-mode: screen;
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-orange,
+          $color-orangered
+        ),
+        url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4Ax-AWw0yyjwayFpL4RqJVQ071VwHFXxhDw&usqp=CAU");
+    }
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-green,
+          $color-lightgreen
+        ),
+        url("https://loveincorporated.blob.core.windows.net/contentimages/gallery/a9fb36be-f130-4f84-ab3b-363116c9c5df-Zhangjiajie_China.jpg");
+    }
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-blue,
+          $color-lightblue
+        ),
+        url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXkBVDjOw4Q9QW1asrW7nQrVX4D8LqhtkIXg&usqp=CAU");
+    }
+  }
+  &_heading {
+    text-transform: uppercase;
+    position: absolute;
+    color: $color-white;
+    top: 40%;
+    left: 50%;
+    padding: 0;
+    text-align: center;
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-orange,
+        $color-orangered
+      );
+    }
+    &--2 {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-green,
+        $color-lightgreen
+      );
+    }
+    &--3 {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-blue,
+        $color-lightblue
+      );
+    }
+  }
+  &_details {
+    padding: 1.5rem;
+    color: $color-black;
+    ul {
+      list-style-type: none;
+      width: 80%;
+      margin: 0 auto;
+      li {
+        text-align: center;
+        &:not(:last-child) {
+          border-bottom: 1px solid rgba($color-black, 0.8);
+        }
+      }
+    }
+  }
+}

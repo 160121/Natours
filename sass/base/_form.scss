@@ -1,0 +1,34 @@
+.form {
+  margin-top: -1rem;
+  &_group {
+    label {
+      font-size: 1rem;
+    }
+  }
+  &_input {
+    height: 2.5rem;
+    width: 96%;
+    padding-top: 0.1rem;
+    font-family: inherit;
+    font-size: inherit;
+    border-bottom: 1px solid $color-orangered;
+    margin-bottom: 2px;
+    border: none;
+    background-color: rgba($color-white, 0.56);
+    &:active {
+      border-color: rgba($color-lightgreen, 0.5);
+    }
+    &:focus {
+      outline: none;
+      box-shadow: 0 1px 3px rgba($color-black, 0.8);
+      border-bottom: 2px solid red;
+    }
+
+    &:valid {
+      border-bottom: 2px solid $color-lightgreen;
+    }
+  }
+  &_radio {
+    margin: 3rem 0;
+  }
+}

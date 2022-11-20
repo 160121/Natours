@@ -1,0 +1,21 @@
+.heading-secondary {
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  background-image: linear-gradient(to right, $color-green, $color-lightgreen);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.2s;
+  margin-bottom: 3rem;
+  &:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.4);
+  }
+}
+.heading-tertiary {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 1.2rem;
+  margin-bottom: 1.3rem;
+  width: 100%;
+}
