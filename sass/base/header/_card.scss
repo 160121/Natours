@@ -4,11 +4,12 @@
   position: relative;
   margin-bottom: 7rem;
   outline: auto;
+  height: auto;
   &_side {
     color: $color-white;
-    height: 30rem;
     transition: all 0.2s ease;
     position: absolute;
+    height:auto;
     top: 0;
     left: 0;
     width: 70%;
@@ -19,6 +20,8 @@
       background-color: $color-white;
     }
     &--back {
+      height:auto;
+      padding-bottom: 7rem;
       transform: rotateY(180deg);
       &-1 {
         background-image: linear-gradient(
@@ -54,7 +57,7 @@
   &_picture {
     background-size: cover;
     background-position: top;
-    height: 15rem;
+    height: 20rem;
     background-blend-mode: screen;
     &--1 {
       background-image: linear-gradient(
@@ -85,7 +88,7 @@
     text-transform: uppercase;
     position: absolute;
     color: $color-white;
-    top: 40%;
+    top: 30%;
     left: 50%;
     padding: 0;
     text-align: center;

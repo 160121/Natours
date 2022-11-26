@@ -10,6 +10,21 @@ body {
   line-height: 1.7;
   padding: 30px; }
 
+html {
+  font-size: 62.5%; }
+  @media (max-width: 37.65em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 60%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 70%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 80%; } }
+
 @keyframes toleft {
   0% {
     opacity: 0;
@@ -281,7 +296,7 @@ body {
 .section-about {
   background-color: rgba(255, 255, 255, 0.3);
   padding-top: 2rem;
-  margin-bottom: 18rem; }
+  margin-bottom: 30rem; }
 
 .section-features {
   padding: 10rem 0;
@@ -299,12 +314,13 @@ body {
   -moz-perspective: 150rem;
   position: relative;
   margin-bottom: 7rem;
-  outline: auto; }
+  outline: auto;
+  height: auto; }
   .card_side {
     color: white;
-    height: 30rem;
     transition: all 0.2s ease;
     position: absolute;
+    height: auto;
     top: 0;
     left: 0;
     width: 70%;
@@ -314,6 +330,8 @@ body {
     .card_side--front {
       background-color: white; }
     .card_side--back {
+      height: auto;
+      padding-bottom: 7rem;
       transform: rotateY(180deg); }
       .card_side--back-1 {
         background-image: linear-gradient(to right bottom, orange, orangered); }
@@ -328,7 +346,7 @@ body {
   .card_picture {
     background-size: cover;
     background-position: top;
-    height: 15rem;
+    height: 20rem;
     background-blend-mode: screen; }
     .card_picture--1 {
       background-image: linear-gradient(to right bottom, orange, orangered), url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4Ax-AWw0yyjwayFpL4RqJVQ071VwHFXxhDw&usqp=CAU"); }
@@ -340,8 +358,8 @@ body {
     text-transform: uppercase;
     position: absolute;
     color: white;
-    top: 40%;
-    left: 60%;
+    top: 30%;
+    left: 50%;
     padding: 0;
     text-align: center; }
     .card_heading--1 {
@@ -367,7 +385,7 @@ body {
   padding-top: 9rem;
   font-size: 7rem;
   line-height: 8rem;
-  margin-bottom: 7rem;
+  margin-bottom: 15rem;
   color: rgba(255, 255, 255, 0.3); }
 
 .story {
@@ -445,7 +463,7 @@ body {
   .form_group label {
     font-size: 1rem; }
   .form_input {
-    height: 2.5rem;
+    height: 3rem;
     width: 96%;
     padding-top: 0.1rem;
     font-family: inherit;
